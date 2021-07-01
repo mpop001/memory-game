@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	width: 300px;
+	height: 300px;
+}
+body {
+	font-family: monospace;
+}
+
+.first-page {
+	background-color: rgba(51, 51, 58, 0.788);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+}
+.first-page .content {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.first-page .content h1 {
+	font-size: 80px;
+	color: #ffeb3b;
+	font-weight: bold;
+	text-shadow: 2px 4px #ff572278;
+}
+.first-page .container{
+
+	margin-top:10px;
+	margin-bottom: 5px;
+}
+.first-page .container div{
+	color: #ffeb3b;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.first-page .container select{
+	width: 100px;
+	padding: 10px;
+	color: #ffeb3b;
+	background-color: black;
+	opacity: 0.8;
+}
+.first-page .content span {
+	color: rgb(0, 0, 0);
+	background-color: yellow;
+	font-size: 20px;
+	padding: 10px 30px;
+	margin-top: 20px;
+	display: inline-block;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+/*------------------------*/
+
+.info-container {
+	width: 1080px;
+	margin: 20px auto;
+	border: 5px solid #000;
+	background-color: #f2f2f5;
+	overflow: hidden;
+	font-size: 20px;
+}
+.info-container .name {
+	float: left;
+	width: 35%;
+	padding: 20px;
+	
+}
+.info-container .time{
+	float: left;
+	width: 35%;
+	padding: 20px;
+}
+.info-container .tries {
+	float: right;
+	width: 25%;
+	padding: 20px;
+}
+
+.memory-game-container {
+	display: flex;
+	width: 1100px;
+	flex-wrap: wrap;
+	margin: 20px auto;
+}
+.memory-game-container.no-clicking{
+	pointer-events: none;
+}
+.memory-game-container .memory-bloks {
+	height: 200px;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+	position: relative;
+	flex: 1 0 200px;
+	margin: 0 10px 20px;
+	cursor: pointer;
+	
+
+}
+.memory-game-container .memory-bloks .front {
+	background-color: rgb(58, 57, 57);
+	line-height: 200px;
+}
+.memory-game-container .memory-bloks .front::before {
+	content: "!";
+	color: #ffeb3b;
+	font-size: 150px;
+	font-weight: bold;
+	-webkit-text-stroke: 5px black;
+}
+.memory-game-container .memory-bloks .back {
+	transform: rotateY(180deg);
+	background-color:#ffeb3b;
+
+}
+.memory-game-container .memory-bloks .back img {
+	width: 140px;
+	height: 140px;
+	margin:25px auto;
+}
+.memory-game-container .memory-bloks .face {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	border: 5px solid #000;
+}
+.memory-game-container .memory-bloks.is-rotate,
+.memory-game-container .memory-bloks.has-match {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+.memory-game-container .memory-bloks.close{
+	transition: opacity 1s ease-out;
+	opacity: 0;
+	pointer-events: none;
+}
+.win{
+	background-color: transparent;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	top: 0%;
+	left: 0%;
+	
+}
+.win .content{
+	padding: 20px;
+	width: 450px;
+	height: 250px;
+	background-color: #ffeb3b;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border:5px solid #000;
+}
+.win .content h1{
+	font-size: 50px;
+}
+.win .content div{
+	width: 100%;
+	height: 100px;
+	margin-top: 20px ;
+	
+
+}
+.win .content div div{
+	
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	width: 33.3333%;
+	float: left;
+}
+.win .content div div span{
+	font-size: 20px;
+	display: block;
+}
+.lose .content h1{
+	color: red;
+}

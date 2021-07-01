@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Memory Game ^_^</title>
+</head>
+<body>
+    <div class="first-page">
+        <div class="content">
+            <h1>The Memory Game</h1>
+            <div class="container">
+            <div>Game Level</div>
+            <select id="level">
+                <option value="90">Esay</option>
+                <option value="60">Middel</option>
+               <option value="45">Hard</option>
+            </select>
+            </div>
+            <br>
+            <span>Start Game </span>
+            <div class="history">History Players</div>
+            <div class="scoure-container">
+                <ul id="Players">
+                    <li>Players</li>
+                    
+                </ul>
+                <ul id="Names">
+                    <li>Names</li>
+                   
+                </ul>
+                <ul id="Times">
+                    <li>Times(s)</li>
+                  
+                </ul>
+                <ul id="Tries">
+                    <li>Tries</li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="info-container">
+
+        <div class="name">
+            Player : <span></span>
+        </div>
+        <div class="time">
+           Time Game: <span></span>
+        </div>
+        <div class="tries">
+            Wrong tries:<span>0</span>
+        </div>
+
+    </div>
+    <div class="memory-game-container">
+        <div class="memory-bloks " data-thing="pen">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/pen.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="pen">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/pen.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="ruler">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/ruler.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="ruler">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/ruler.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="maths">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/maths.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="maths">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/maths.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="light">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/light-bulb.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="light">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/light-bulb.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="blackboard">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/blackboard.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="blackboard">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/blackboard.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="bag">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/school-bag.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="bag">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/school-bag.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="exam">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/exam.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="exam">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/exam.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="compass">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/compass.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="compass">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/compass.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="paint">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/paint-palette.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="paint">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/paint-palette.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="trophy">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/trophy.png" >
+            </div>
+        </div>
+        <div class="memory-bloks " data-thing="trophy">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="img/trophy.png" >
+            </div>
+        </div>
+        
+        <audio id="success" src="audio/success.wav" preload="auto"></audio>
+        <audio id="wrong" src="audio/wrong.wav" preload="auto"></audio>
+        <audio id="gameover" src="audio/Game Over.mp3" preload="auto"></audio>
+        <audio id="youwin" src="audio/You Win.mp3" preload="auto"></audio>
+
+
+    </div>
+    <div class="win">
+        <div class="content">
+            <h1>You win</h1>
+            <div>
+                <div >Name: <span id="win-name"></span></div>
+                <div > Time: <span id="win-time"></span></div>
+                <div >Wrong tries: <span id="win-tries"></span></div>
+                <section id="button-new">New game <i class="fas fa-sync-alt"></i></section>
+            </div>
+        </div>
+    </div>
+    <div class="lose">
+        <div class="content">
+            <h1>Game Over</h1>
+            <div id="button">Replay <i class="fas fa-sync-alt"></i></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
