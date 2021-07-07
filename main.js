@@ -139,7 +139,7 @@ function check(card1,card2){
 }
 
 function mytime(){
-   if(thetime.textContent >=0){
+   if(thetime.textContent >0){
     thetime.textContent--;
    }else{
        clearInterval(myCount);
